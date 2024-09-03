@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pricing Table</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="TASK_1_A_ii.css" rel="stylesheet">
+</head>
+<body>
+    <div class="container mt-5" class="centered-div p-4">
+        <h2 class="text-center mb-4">Pricing Plans for S3</h2>
+        <div class="table-responsive" class="d-flex justify-content-center align-items-center vh-100">
+            <div class="centered-div p-4">
+            <table class="table table-bordered table-hover">
+                <thead class="thead-dark">
+                    <tr>
+                        <th scope="col">Plan</th>
+                        <th scope="col">First 50 TB/Month (In $)</th>
+                        <th scope="col">Next 450 TB/Month (In $)</th>
+                        <th scope="col">Over 500 TB/Month (In $)</th>
+                        <th scope="col"></th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr class="pricing-row">
+                        <td>S3 Standard</td>
+                        <td>0.023 per GB</td>
+                        <td>0.022 per GB</td>
+                        <td>0.021 per GB</td>
+                        <td><button class="btn btn-primary" onclick="window.location.href='https://aws.amazon.com/s3/pricing/?p=pm&c=s3&z=4'">Use</button></td>
+                    </tr>
+                    <tr class="pricing-row">
+                        <td>S3 Intelligent - Tiering</td>
+                        <td>0.023 per GB</td>
+                        <td>0.022 per GB</td>
+                        <td>0.021 per GB</td>
+                        <td><button class="btn btn-primary" onclick="window.location.href='https://aws.amazon.com/s3/pricing/?p=pm&c=s3&z=4'">Use</button></td>
+                    </tr>
+                </tbody>
+            </table>
+            </div>
+        </div>
+    </div>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
