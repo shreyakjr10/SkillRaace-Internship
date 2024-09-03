@@ -66,3 +66,8 @@
 - **Details**:
   - Include features such as item listings, search functionality, messaging between buyers and sellers, and payment integration.
 
+# Output ScreenShots 
+
+## Output ScreenShots are Available in each one of the PHASES Folder and can be easily accessible through in PNG Format
+
+
