@@ -1,0 +1,46 @@
+{% extends 'core/base.html' %}
+
+{% block title %} Welcome {% endblock title %}
+
+{% block content %}
+<div class="mt-6 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-3xl font-semibold text-center">Newest Items</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for item in items %}
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <a href="{% url 'item:detail' item.id %}">
+                    <div class="overflow-hidden rounded-t-xl">
+                        <img src="{{ item.image.url }}" alt="{{ item.name }}" class="w-full h-48 object-cover">
+                    </div>
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold">{{ item.name }}</h2>
+                        <p class="text-gray-700 mt-2">Price: ${{ item.price }}</p>
+                    </div>
+                </a>
+            </div>
+        {% empty %}
+            <p class="col-span-full text-center text-gray-500">No items available at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
+
+<div class="mt-12 px-6 py-12 bg-gray-100 rounded-xl">
+    <h2 class="mb-12 text-3xl font-semibold text-center">Categories</h2>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {% for category in categories %}
+            <div class="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                <a href="{% url 'category:detail' category.id %}">
+                    <div class="p-6">
+                        <h2 class="text-xl font-semibold">{{ category.name }}</h2>
+                        <p class="text-gray-700 mt-2">{{ category.items.count }} items available</p>
+                    </div>
+                </a>
+            </div>
+        {% empty %}
+            <p class="col-span-full text-center text-gray-500">No categories available at the moment.</p>
+        {% endfor %}
+    </div>
+</div>
+{% endblock %}

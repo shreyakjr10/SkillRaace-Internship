@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <title>{% block title %}{% endblock title %} | ShreyakCart</title>
+</head>
+<body class="bg-gray-100 text-gray-900">
+    <nav class="py-6 px-6 flex justify-between items-center bg-white shadow-md">
+        <a href="/" class="text-2xl font-bold text-teal-600">ShreyakCart</a>
+
+        <div class="space-x-6">
+            <a href="{% url 'item:new' %}" class="text-lg font-semibold hover:text-teal-500">New Item</a>
+            <a href="{% url 'item:items' %}" class="text-lg font-semibold hover:text-teal-500">Browse</a>
+
+            {% if request.user.is_authenticated %}
+                <a href="{% url 'conversation:inbox' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-lg hover:bg-teal-600">Inbox</a>
+                <a href="{% url 'dashboard:index' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-lg hover:bg-gray-600">Dashboard</a>
+            {% else %}
+                <a href="{% url 'core:signup' %}" class="px-6 py-3 text-lg font-semibold bg-teal-500 text-white rounded-lg hover:bg-teal-600">Sign Up</a>
+                <a href="{% url 'core:login' %}" class="px-6 py-3 text-lg font-semibold bg-gray-500 text-white rounded-lg hover:bg-gray-600">Log In</a>
+            {% endif %}
+        </div>
+    </nav>
+
+    <main class="px-6 py-8">
+        {% block content %}
+        {% endblock %}
+    </main>
+
+    <footer class="py-8 px-6 bg-gray-800 text-gray-400">
+        <div class="container mx-auto flex flex-col md:flex-row justify-between">
+            <div class="mb-8 md:mb-0 md:w-2/3">
+                <h3 class="mb-4 text-xl font-semibold text-white">About ShreyakCart</h3>
+                <p class="text-lg">
+                    Welcome to ShreyakCart, your ultimate online destination for all your shopping needs. Explore our diverse categories:
+                    <br><br>
+                    <b>Clothes:</b> Discover stylish apparel for men, women, and kids, perfect for every occasion.
+                    <br>
+                    <b>Furniture:</b> Find high-quality, durable furniture that blends beauty with functionality.
+                    <br>
+                    <b>Toys:</b> Delight your little ones with our safe and engaging toy collection, designed to inspire and entertain.
+                    <br><br>
+                    At ShreyakCart, we offer quality, convenience, and a seamless shopping experience all in one place!
+                </p>
+            </div>
+
+            <div class="md:w-1/3">
+                <h3 class="mb-4 text-xl font-semibold text-white">Menu</h3>
+                <ul class="space-y-3">
+                    <li><a href="#" class="text-lg hover:text-teal-400">About</a></li>
+                    <li><a href="{% url 'core:contact' %}" class="text-lg hover:text-teal-400">Contact</a></li>
+                    <li><a href="#" class="text-lg hover:text-teal-400">Privacy Policy</a></li>
+                    <li><a href="#" class="text-lg hover:text-teal-400">Terms of Use</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
