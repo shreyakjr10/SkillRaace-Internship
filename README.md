@@ -8,10 +8,10 @@
 - **Objective**: Design an HTML structure for a landing page using Bootstrap's grid system.
 - **Details**:
   - Style elements with CSS, including background images, fonts, and spacing.
-  - Apply Bootstrap's responsive classes to ensure adaptability across different screen sizes.
+  - Apply Bootstrap's responsive classes to ensure adaptability across various screen sizes.
 
 #### Build a Pricing Table
-- **Objective**: Create an HTML table to display various pricing options.
+- **Objective**: Create an HTML table to display different pricing options.
 - **Details**:
   - Utilize Bootstrap's table classes for styling and add hover effects.
   - Customize the CSS to align with the desired design, including color and font adjustments.
@@ -25,7 +25,7 @@
   - Apply CSS for styling, including borders, shadows, and transitions.
 
 #### Develop a Contact Form
-- **Objective**: Create an HTML form for collecting user contact information.
+- **Objective**: Create an HTML form to collect user contact information.
 - **Details**:
   - Use Bootstrap's form classes for styling.
   - Customize CSS for form elements, including labels, input fields, buttons, and validation styles.
@@ -45,19 +45,19 @@
 - **Details**:
   - Use Bootstrap's navbar component for the navigation bar.
   - Add a dropdown menu using Bootstrap's dropdown classes.
-  - Customize CSS for styling the navbar and dropdown menu, including color and positioning.
+  - Customize CSS for styling the navbar and dropdown menu, including colors and positioning.
 
 ## Phase 3
 
 #### Create a Chatting Application/Website
-- **Objective**: Develop a chat application or website for individual or group chats between networks.
+- **Objective**: Develop a chat application or website for individual or group chats between users.
 
 ## Phase 4
 
 #### Create an E-Commerce Website
-- **Objective**: Build an e-commerce site involving front and back-end technologies.
+- **Objective**: Build an e-commerce site involving both front-end and back-end technologies.
 - **Details**:
-  - Implement a large database with multiple product categories and pricing structures.
+  - Implement a comprehensive database with multiple product categories and pricing structures.
 
 ## Phase 5
 
@@ -66,8 +66,12 @@
 - **Details**:
   - Include features such as item listings, search functionality, messaging between buyers and sellers, and payment integration.
 
-# Output ScreenShots 
+## Output Screenshots
 
-## Output ScreenShots are Available in each one of the PHASES Folder and can be easily accessible through in PNG Format
+- Screenshots are available in each phase's folder and can be accessed in PNG format.
 
+## Execution
 
+- Run the application using the following command:
+  ```bash
+  python manage.py runserver
