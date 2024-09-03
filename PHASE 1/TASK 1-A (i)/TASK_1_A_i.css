@@ -1,0 +1,40 @@
+
+body {
+    font-family: Arial, sans-serif;
+}
+
+.hero-section {
+    background-color: darkred;
+    background-size: cover;
+    background-position: center;
+    padding: 100px 0;
+}
+
+.hero-section h1,
+.hero-section p {
+    margin-bottom: 20px;
+}
+
+.features-section {
+    background-color: #f8f9fa;
+}
+
+.feature-box {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section {
+    background-color: #007bff;
+}
+
+.cta-section h2,
+.cta-section p {
+    margin-bottom: 20px;
+}
+
+.footer {
+    background-color: #343a40;
+    color: white;
+}
